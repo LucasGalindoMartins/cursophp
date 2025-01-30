@@ -83,19 +83,20 @@ input[type=submit]
     width: 100%;
     margin: 25px 0px;
 
-    background-color: white;
+    background-color: rgb(49, 49, 49);
+    color: white;
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
 
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
 }
 
 input[type=submit]:hover
 {
-    background-color: rgb(49, 49, 49);
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 input[type=button]
@@ -111,7 +112,7 @@ input[type=button]
     border-radius: 5px;
     cursor: pointer;
 
-    transition-duration: 0.3s;
+    transition-duration: 0.4s;
 }
 
 input[type=button]:hover
