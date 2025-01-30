@@ -29,8 +29,8 @@ a
     display: block;
 
     /*  */
-    color: white;
-    text-decoration: underline;
+    color: rgb(110, 31, 31);
+    text-decoration: none;
     font-style: italic;
     text-align: center;
     font-weight: bolder;
@@ -41,7 +41,8 @@ a
 
 a:hover
 {
-    color: rgb(110, 31, 31);
+    color: white;
+    text-decoration: underline;
 }
 
 main
