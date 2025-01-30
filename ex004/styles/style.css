@@ -17,6 +17,33 @@ body, html
     background-color: black;
 }
 
+p
+{
+    color: white;
+    margin: 20px 0px;
+    font-size: 1.2em;
+}
+
+a
+{
+    display: block;
+
+    /*  */
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.3em;
+
+    transition-duration: 0.3s;
+}
+
+a:hover
+{
+    color: rgb(110, 31, 31);
+}
+
 main
 {
     display: flex;
