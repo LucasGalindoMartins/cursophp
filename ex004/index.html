@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interação com Formulários</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>FALA FIEL</h1>
+                <div id="formulario">
+                    <form action="cad.php" method="post" autocomplete="off">
+                        <div id="img">
+                        </div>
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <br>
+                            <input type="email" name="email" id="iemail" placeholder="Insira seu e-mail">
+                        </div>
+                        <div class="campo">
+                            <label for="senha">Senha</label>
+                            <br>
+                            <input type="password" name="senha" id="isenha" placeholder="Insira sua senha">
+                        </div>
+                        <input type="submit" value="Enviar">
+                        <input type="button" value="Esqueci minha senha">
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
