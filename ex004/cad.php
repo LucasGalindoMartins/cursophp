@@ -13,7 +13,7 @@
                 <p>Esses são seus dados:</p>
                 <?php
                     $email = $_POST["email"] ?? "Não possui email cadastrado!!";
-                    $senha = $_POST["senha"?? "Não possui senha cadastada!!"];
+                    $senha = $_POST["senha"]?? "Não possui senha cadastada!!";
                     echo "<p>Email: <strong>$email</strong></p>
                     <p>Senha: <strong>$senha</strong></p>";
                 ?>
