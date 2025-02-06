@@ -12,12 +12,21 @@
                 <h1>Conversor de Moedas v1.0</h1>
 
                 <?php 
-                    $saldo = $_GET["saldo"];
-                    $dolar = 5.22;
-                    $res = number_format($saldo/$dolar, 2, ',');
+                    $saldo = $_GET["saldo"] ?? 0;
+
+                    $ini = date("m-d-Y", strtotime("-7 days"));
+                    $fim = date("m-d-Y");
+            
+                    $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\''. $ini .'\'&@dataFinalCotacao=\''. $fim .'\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
+            
+                    $dados = json_decode(file_get_contents($url), true);
+            
+                    $cotacao = $dados["value"][0]["cotacaoCompra"];
+
+                    $res = number_format($saldo/$cotacao, 2, ',');
 
                     echo "Seus <strong>R$ $saldo</strong> equivalem a <strong>US$ $res</strong>. <br> <br>";
-                    echo "Cotação obtida diretamente do site do <strong>Banco Central do Brasil</strong>"
+                    echo "Cotação obtida diretamente do site do <strong>Banco Central do Brasil.</strong>"
                 ?>
                 <br>
                 <br>
