@@ -10,6 +10,7 @@
         <?php 
             $year = $_GET['ano'] ?? 0;
             $wyear = $_GET['ano_idade'] ?? 0;
+            $ano_atual = date('Y');
         ?>
         <main>
             <h1>Calculando a sua idade</h1>
@@ -17,7 +18,7 @@
                 <label for="ano">Em que ano você nasceu?</label>
                 <input type="number" name="ano" id="iano" value="<?= $year?>">
 
-                <label for="ano_idade">Quer saber sua idade em que ano? (Atualmente estamos em <strong>2025</strong>)</label>
+                <label for="ano_idade">Quer saber sua idade em que ano? (Atualmente estamos em <strong><?= $ano_atual?></strong>)</label>
                 <input type="number" name="ano_idade" id="iano_idade" value="<?= $wyear?>">
 
                 <input type="submit" value="Qual será minha idade?">
